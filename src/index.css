@@ -6,34 +6,24 @@
   :root {
     --background: 30 20% 97%;
     --foreground: 20 15% 12%;
-
     --card: 0 0% 100%;
     --card-foreground: 20 15% 12%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 20 15% 12%;
-
     --primary: 350 65% 45%;
     --primary-foreground: 0 0% 100%;
-
     --secondary: 30 40% 94%;
     --secondary-foreground: 20 15% 12%;
-
     --muted: 30 20% 92%;
     --muted-foreground: 20 10% 50%;
-
     --accent: 22 85% 55%;
     --accent-foreground: 0 0% 100%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 30 20% 88%;
     --input: 30 20% 88%;
     --ring: 350 65% 45%;
-
     --radius: 0.75rem;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -42,8 +32,6 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-
-    /* Elmira brand */
     --elm-crimson: #c1292e;
     --elm-coral: #e07a5f;
     --elm-gold: #f2a65a;
@@ -57,12 +45,10 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
     font-family: "Golos Text", sans-serif;
   }
-
   h1,
   h2,
   h3,
@@ -78,124 +64,42 @@
   .font-body {
     font-family: "Golos Text", sans-serif;
   }
-}
-
-/* Animations */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+  .perspective-1000 {
+    perspective: 1000px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .perspective-1500 {
+    perspective: 1500px;
   }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+  .perspective-2000 {
+    perspective: 2000px;
   }
-  to {
-    opacity: 1;
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
   }
 }
 
-@keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-fade-up {
-  animation: fadeUp 0.7s ease forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
-
-.animate-slide-right {
-  animation: slideRight 0.7s ease forwards;
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-}
-
-.delay-100 {
-  animation-delay: 0.1s;
-}
-.delay-200 {
-  animation-delay: 0.2s;
-}
-.delay-300 {
-  animation-delay: 0.3s;
-}
-.delay-400 {
-  animation-delay: 0.4s;
-}
-.delay-500 {
-  animation-delay: 0.5s;
-}
-
-/* Grain texture */
-.grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Hover effects */
-.hover-lift {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.hover-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(193, 41, 46, 0.15);
-}
-
-/* Custom scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--elm-cream);
+  background: #0d0906;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--elm-crimson);
-  border-radius: 3px;
+  border-radius: 4px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: rgba(193, 41, 46, 0.35);
+  color: white;
 }
