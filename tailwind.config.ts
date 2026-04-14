@@ -7,7 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
-			"./1776185847226336786.html"
+		"./1776185847226336786.html"
 	],
 	prefix: "",
 	theme: {
@@ -62,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				elm: {
+					crimson: '#C1292E',
+					coral: '#E07A5F',
+					gold: '#F2A65A',
+					cream: '#FAF4EE',
+					dark: '#1E1410',
+					blush: '#F5D7CF',
 				}
 			},
 			borderRadius: {
@@ -72,16 +80,6 @@ export default {
 			fontFamily: {
 				display: ['Cormorant', 'serif'],
 				body: ['Golos Text', 'sans-serif'],
-			},
-			colors: {
-				elm: {
-					crimson: '#C1292E',
-					coral: '#E07A5F',
-					gold: '#F2A65A',
-					cream: '#FAF4EE',
-					dark: '#1E1410',
-					blush: '#F5D7CF',
-				}
 			},
 			keyframes: {
 				'accordion-down': {
